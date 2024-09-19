@@ -1,0 +1,15 @@
+mkdir avilol
+hop avilol
+sl
+sleep 20 &
+ping 35587 20
+bg 35587
+iMan sleep
+iMan ls
+iMan sleep
+iMan ls
+iMan sleep
+sleep 10
+sleep 1
+sleep 100
+sleep 3
