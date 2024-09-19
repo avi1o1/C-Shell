@@ -4,7 +4,6 @@
 - [Introduction](#introduction)
 - [Detailed Features](#feature-details)
 - [Usage](#usage)
-- [Assumptions](#assumptions--deviation-from-the-instruction)
 - [It's a Feature, not a bug](#its-a-feature-not-a-bug)
 - [Acknowledgements](#acknowledgements)
 
@@ -103,21 +102,14 @@ To start the C-Shell, follow these steps:
     make clean
     ```
 
-## Assumptions / Deviation from the Instruction
-- Firstly, I have made every effort to address the doubts document, but it has become too lengthy and complex to follow effectively. Therefore, I assure that I have tried my best to stick to the provided requirements and do not use any prohibited calls or functions; but in the unlikely case of any mistakes, please consider the very tedious nature of keeping up with the doubts doc. Thank You!
-
-- Format / content of custom print statements like error messages may not exactly match with the requirements. But, they do contain all (if not more) information that the requirements have asked for.
-
-- Running multiple ";" seperated commands are treated as multiple commands, and not as a single command. So, if one of the commands fails (or is a log command), the other commands will still run; and thus get logged into the log file, also. This is a deviation from the requirements, but I believe it is a more user-friendly approach.
-
-- The `activities` command only shows the background processes spawned by the shell, and not all the processes spawned (the latter actually fills up the screen, in certain cases, and makes it very user-unfriendly). Also, the print is not in lexographically sorted order; but in the order of the process creation (seemed like a more user-friendly approach; and also makes it less memory-intensive for the program). Since, we are doing only background processes, a stopped status refers to a zombie process; and running otherwise.
-
-- `Ctrl+D` quits the shell gracefully, ie, it waits for all foreground processes to complete before exiting. This is a deviation from the requirements, but I believe it is a more user-friendly approach.
-
 ## It's a Feature, not a bug
 - `vim &` may run into some problems, as the vim window appears but the keyboard control is with the shell. Leading to the inability of the user to interact with the vim smoothly, and hence raising significant annoyance. While it may seem a very hypothetical command call to run vim in background, but just in case.
 
 - `Ctrl+Z` puts thw whole shell in the background. This may be a sub-optimally designed feature, one can easily bring the shell back to the foreground using the 'fg' command.
+
+- The `activities` command only shows the background processes spawned by the shell, and not all the processes spawned (the latter actually fills up the screen, in certain cases, and makes it very user-unfriendly). Also, the print is not in lexographically sorted order; but in the order of the process creation (seemed like a more user-friendly approach; and also makes it less memory-intensive for the program). Since, we are doing only background processes, a stopped status refers to a zombie process; and running otherwise.
+
+- `Ctrl+D` quits the shell gracefully, ie, it waits for all foreground processes to complete before exiting. This is a deviation from the requirements, but I believe it is a more user-friendly approach.
 
 - As for any other bugs that you may encounter, do let us know! The code monkeys at our heaquarters are trying their best in making this shell better and better!
 
